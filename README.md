@@ -31,9 +31,6 @@ A API está hospedada no Render e integrada ao banco de dados Supabase:
 ## 📋 Funcionalidades Atuais
 * [x] **Listagem de Alimentos:** Consulta paginada para alta performance.
 * [x] **Busca Detalhada:** Acesso a nutrientes específicos de mais de 7.000 registros.
-* [x] **Infraestrutura como Código:** Configuração pronta para Docker, facilitando o deploy.
-* [x] **Segurança de Ambiente:** Gerenciamento de credenciais via variáveis de ambiente (`.env`).
-
 ---
 
 <img width="1081" height="272" alt="image" src="https://github.com/user-attachments/assets/4294855a-c55b-4339-9cdd-9fca60eadc69" />

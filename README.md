@@ -36,3 +36,6 @@ A API está hospedada no Render e integrada ao banco de dados Supabase:
 
 ---
 
+<img width="1081" height="272" alt="image" src="https://github.com/user-attachments/assets/4294855a-c55b-4339-9cdd-9fca60eadc69" />
+
+

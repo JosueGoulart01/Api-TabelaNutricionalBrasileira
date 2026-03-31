@@ -1,7 +1,5 @@
 # 🥗 Tabela Nutricional Brasileira API
 
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJosueGoulart01%2FTabelaNutricionalBrasileira&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visualiza%C3%A7%C3%B5es&edge_flat=false">
-</p>
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)

@@ -1,9 +1,5 @@
 # 🥗 Tabela Nutricional Brasileira API
-<p align="center">
-  <img src="https://img.shields.io/github/last-commit/JosueGoulart01/TabelaNutricionalBrasileira?style=for-the-badge&color=orange">
-  <img src="https://img.shields.io/github/repo-size/JosueGoulart01/TabelaNutricionalBrasileira?style=for-the-badge&color=blue">
-  <img src="https://img.shields.io/github/languages/top/JosueGoulart01/TabelaNutricionalBrasileira?style=for-the-badge&color=yellow">
-  <br>
+
   <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJosueGoulart01%2FTabelaNutricionalBrasileira&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visualiza%C3%A7%C3%B5es&edge_flat=false">
 </p>
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)

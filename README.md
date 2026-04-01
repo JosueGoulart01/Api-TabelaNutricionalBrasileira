@@ -1,54 +1,84 @@
 # 🥗 Tabela Nutricional Brasileira API
 
-API REST de alto desempenho para consulta da composição nutricional de alimentos brasileiros baseada na **TACO (Tabela Brasileira de Composição de Alimentos)**.
+API REST de alto desempenho para consulta da composição nutricional de alimentos brasileiros, baseada na **TACO (Tabela Brasileira de Composição de Alimentos)**.
 
-Projetada para integração com:
-- Aplicativos fitness 🏋️
-- Sistemas de saúde 🏥  
-- Diários alimentares 📊  
-- Projetos acadêmicos 🎓  
+Projetada para ser **escalável, flexível e fácil de integrar**, atendendo diferentes tipos de aplicações.
 
 ---
 
-## 🧰 Tecnologias
+## 🎯 Casos de Uso
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+Esta API pode ser integrada com:
 
-- Java + Spring Boot  
-- PostgreSQL  
-- Deploy em Render  
-- Documentação com Swagger  
+- 🏋️ Aplicativos fitness
+- 🏥 Sistemas de saúde
+- 📊 Diários alimentares
+- 🎓 Projetos acadêmicos
+- 🤖 Aplicações com IA nutricional
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+
+
+
+
+
+
+- ☕ Java + Spring Boot
+- 🐘 PostgreSQL
+- ☁️ Deploy em Render
+- 📄 Documentação interativa com Swagger/OpenAPI
 
 ---
 
 ## 🚀 Acesso Rápido
 
-| Ambiente      | URL |
-|--------------|-----|
-| 🌐 Produção   | https://tabelanutricionalbrasileira.onrender.com |
-| 📄 Swagger    | https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html |
+| Ambiente    | URL                                                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🌐 Produção | [https://tabelanutricionalbrasileira.onrender.com](https://tabelanutricionalbrasileira.onrender.com)                                             |
+| 📄 Swagger  | [https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html](https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html) |
 
 ---
 
-## ⚡ Como Consumir a API
+## ⚡ Endpoints
+
+<img width="1081" height="272" alt="Captura de tela 2026-03-31 203840" src="https://github.com/user-attachments/assets/84cb8da4-c5cb-4261-89d6-66067a12b93a" />
 
 ### 🔍 Buscar alimentos
+
 ```http
 GET /alimentos/search?nome=banana
-Parâmetros
-Nome	Tipo	Obrigatório	Descrição
-nome	string	✅	Termo de busca do alimento
-📄 Buscar alimento por ID
+```
+
+#### Parâmetros
+
+| Nome | Tipo   | Obrigatório | Descrição                  |
+| ---- | ------ | ----------- | -------------------------- |
+| nome | string | ✅           | Termo de busca do alimento |
+
+---
+
+### 📄 Buscar alimento por ID
+
+```http
 GET /alimentos/{id}
-Exemplo
+```
+
+#### Exemplo
+
+```http
 GET /alimentos/175
-📦 Estrutura de Resposta
+```
 
-A API utiliza uma estrutura flexível de nutrientes para garantir compatibilidade futura.
+---
 
+## 📦 Estrutura de Resposta
+
+A API utiliza uma **estrutura dinâmica de nutrientes**, permitindo evolução sem quebra de contrato.
+
+```json
 {
   "id": 175,
   "nome": "Banana, da terra, crua",
@@ -65,43 +95,97 @@ A API utiliza uma estrutura flexível de nutrientes para garantir compatibilidad
     }
   ]
 }
-🧠 Decisões de Arquitetura
-✔️ Estrutura dinâmica de nutrientes
+```
 
-Evita quebra de contrato ao adicionar novos nutrientes no futuro.
+---
 
-✔️ DTO Pattern
+## 🧠 Decisões de Arquitetura
+
+### ✔️ Estrutura dinâmica de nutrientes
+
+- Permite adicionar novos nutrientes sem alterar contratos existentes
+- Evita versionamento desnecessário da API
+
+### ✔️ DTO Pattern
 
 Separação clara entre:
 
-Entidade de banco
-Resposta da API
-✔️ Camada de serviço com tratamento de dados
-Valores nulos convertidos para 0.0
-Evita erros no front-end
-📌 Boas Práticas de Uso
-Sempre trate a lista de nutrientes como dinâmica
-Não dependa da ordem dos elementos
-Utilize cache local para reduzir chamadas repetidas
-Faça paginação na busca (search)
-❗ Possíveis Códigos de Resposta
-Código	Significado
-200	Sucesso
-404	Alimento não encontrado
-400	Requisição inválida
-500	Erro interno
-🧪 Exemplo de Consumo (JavaScript)
+- 🗄️ Entidades de banco de dados
+- 🔄 Objetos de resposta (DTOs)
+
+### ✔️ Camada de serviço
+
+- Tratamento de dados centralizado
+- Conversão de valores nulos para `0.0`
+- Evita erros no front-end
+
+---
+
+## 📌 Boas Práticas de Uso
+
+- 🔄 Trate a lista de nutrientes como **dinâmica**
+- 🚫 Não dependa da ordem dos elementos
+- ⚡ Utilize cache local para melhorar performance
+- 📄 Implemente paginação na busca (`search`)
+- 🔍 Normalize nomes (ex: lowercase) para buscas melhores
+
+---
+
+## ❗ Códigos de Resposta
+
+| Código | Significado              |
+| ------ | ------------------------ |
+| 200    | Sucesso                  |
+| 400    | Requisição inválida      |
+| 404    | Alimento não encontrado  |
+| 500    | Erro interno do servidor |
+
+---
+
+## 🧪 Exemplo de Consumo (JavaScript)
+
+```javascript
 async function buscarAlimento(nome) {
-  const response = await fetch(
-    `https://tabelanutricionalbrasileira.onrender.com/alimentos/search?nome=${nome}`
-  );
+  try {
+    const response = await fetch(
+      `https://tabelanutricionalbrasileira.onrender.com/alimentos/search?nome=${nome}`
+    );
 
-  const data = await response.json();
-  return data;
+    if (!response.ok) {
+      throw new Error("Erro ao buscar alimento");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
 }
+```
 
-👨‍💻 Autor
+---
 
-Desenvolvido por Josué Goulart
+## 🔐 Melhorias Futuras
 
+- 🔑 Autenticação com JWT
+- 📊 Paginação e filtros avançados
+- ❤️ Favoritos de alimentos
+- 📈 Histórico de consumo
+- 🤖 Integração com IA para análise nutricional
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Josué Goulart**
+
+---
+
+---
+
+## 📜 Licença
+
+Este projeto pode ser utilizado para fins educacionais e comerciais.\
+Considere adicionar uma licença (MIT, Apache 2.0, etc.) para maior clareza.
 

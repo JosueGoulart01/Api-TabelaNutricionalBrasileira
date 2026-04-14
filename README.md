@@ -166,15 +166,6 @@ async function buscarAlimento(nome) {
 
 ---
 
-## 🔐 Melhorias Futuras
-
-- 🔑 Autenticação com JWT
-- 📊 Paginação e filtros avançados
-- ❤️ Favoritos de alimentos
-- 📈 Histórico de consumo
-- 🤖 Integração com IA para análise nutricional
-
----
 
 ## 👨‍💻 Autor
 

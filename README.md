@@ -413,9 +413,9 @@ interface Nutriente {
 
 ```typescript
 interface PaginatedResponse<T> {
-  content: T[];           // Lista de itens
-  totalElements: number;  // Total de elementos
-  totalPages: number;     // Total de páginas
+  content: T[];           
+  totalElements: number;  
+  totalPages: number;     
 }
 ```
 

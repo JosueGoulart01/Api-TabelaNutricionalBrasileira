@@ -61,6 +61,7 @@
 
 | Ambiente | URL |
 |----------|-----|
+| 🌐 **NutriBrasil** | [`https://api-tabela-nutricional-brasileira.vercel.app/`](https://api-tabela-nutricional-brasileira.vercel.app/) |
 | 🌐 **API Base** | [`https://tabelanutricionalbrasileira.onrender.com`](https://tabelanutricionalbrasileira.onrender.com) |
 | 📄 **Swagger UI** | [`https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html`](https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html) |
 

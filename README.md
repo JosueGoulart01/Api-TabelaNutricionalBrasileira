@@ -83,7 +83,6 @@ Alem da API, disponibilizamos um **site interativo** onde voce pode explorar e t
 | Ambiente | URL |
 |----------|-----|
 | 🌐 **API Base** | [`https://tabelanutricionalbrasileira.onrender.com`](https://tabelanutricionalbrasileira.onrender.com) |
-| 📄 **Swagger UI** | [`https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html`](https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html) |
 | 🖥️ **Site Interativo** | [`https://api-tabela-nutricional-brasileira.vercel.app`](https://api-tabela-nutricional-brasileira.vercel.app) |
 
 ### Teste Rápido

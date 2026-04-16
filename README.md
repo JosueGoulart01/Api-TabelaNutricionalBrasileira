@@ -6,21 +6,42 @@
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
 </p>
 
-<h1 align="center">
-  <br>
-  🥗 Tabela Nutricional Brasileira API
-  <br>
-</h1>
+<h1 align="center">Tabela Nutricional Brasileira API</h1>
 
-<h4 align="center">API REST de alto desempenho para consulta da composição nutricional de alimentos brasileiros, baseada na <a href="https://www.cfn.org.br/wp-content/uploads/2017/03/taco_4_edicao_ampliada_e_revisada.pdf">TACO</a> (Tabela Brasileira de Composição de Alimentos).</h4>
+<h4 align="center">API REST de alto desempenho para consulta da composicao nutricional de alimentos brasileiros, baseada na <a href="https://www.cfn.org.br/wp-content/uploads/2017/03/taco_4_edicao_ampliada_e_revisada.pdf">TACO</a> (Tabela Brasileira de Composicao de Alimentos).</h4>
 
 <p align="center">
-  <a href="#-início-rápido">Início Rápido</a> •
+  <a href="#-site-interativo">Site Interativo</a> •
+  <a href="#-inicio-rapido">Inicio Rapido</a> •
   <a href="#-endpoints">Endpoints</a> •
-  <a href="#-exemplos-de-código">Exemplos</a> •
+  <a href="#-exemplos-de-codigo">Exemplos</a> •
   <a href="#-estrutura-de-resposta">Estrutura</a> •
-  <a href="#-boas-práticas">Boas Práticas</a>
+  <a href="#-boas-praticas">Boas Praticas</a>
 </p>
+
+---
+
+## 🌐 Site Interativo
+
+Alem da API, disponibilizamos um **site interativo** onde voce pode explorar e testar todos os endpoints de forma visual e documentada!
+
+<p align="center">
+  <a href="https://api-tabela-nutricional-brasileira.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Acessar%20Site%20Interativo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Site Interativo" />
+  </a>
+</p>
+
+### Recursos do Site:
+
+| Recurso | Descricao |
+|---------|-----------|
+| **Testador de API** | Execute requisicoes diretamente no navegador e veja as respostas em tempo real |
+| **Documentacao Visual** | Navegue pelos endpoints com exemplos interativos |
+| **Status em Tempo Real** | Verifique se a API esta online e funcionando |
+| **Exemplos de Codigo** | Copie snippets prontos para JavaScript, Python e cURL |
+| **Busca de Alimentos** | Interface amigavel para pesquisar alimentos e ver dados nutricionais |
+
+> **Dica:** O site e perfeito para testar a API antes de integrar no seu projeto!
 
 ---
 
@@ -55,15 +76,15 @@
 
 ---
 
-## 🚀 Início Rápido
+## 🚀 Inicio Rapido
 
 ### URLs de Acesso
 
 | Ambiente | URL |
 |----------|-----|
-| 🌐 **NutriBrasil** | [`https://api-tabela-nutricional-brasileira.vercel.app/`](https://api-tabela-nutricional-brasileira.vercel.app/) |
 | 🌐 **API Base** | [`https://tabelanutricionalbrasileira.onrender.com`](https://tabelanutricionalbrasileira.onrender.com) |
 | 📄 **Swagger UI** | [`https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html`](https://tabelanutricionalbrasileira.onrender.com/swagger-ui/index.html) |
+| 🖥️ **Site Interativo** | [`https://api-tabela-nutricional-brasileira.vercel.app`](https://api-tabela-nutricional-brasileira.vercel.app) |
 
 ### Teste Rápido
 

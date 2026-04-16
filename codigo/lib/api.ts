@@ -75,14 +75,18 @@ export async function getAlimentoById(id: number): Promise<ApiResponse<Alimento>
   return fetchApi<Alimento>(`/alimentos/${id}`)
 }
 
-export async function searchAlimentos(nome: string, page = 0, size = 20): Promise<ApiResponse<{ content: Alimento[], totalElements: number, totalPages: number }>> {
-  return fetchApi(`/alimentos/search?nome=${encodeURIComponent(nome)}&page=${page}&size=${size}`)
+export async function searchAlimentos(nome: string, page = 0, size = 10): Promise<ApiResponse<{ content: Alimento[], totalElements: number, totalPages: number }>> {
+  // Limita o tamanho máximo a 10
+  const limitedSize = Math.min(Math.max(size, 1), 10)
+  return fetchApi(`/alimentos/search?nome=${encodeURIComponent(nome)}&page=${page}&size=${limitedSize}`)
 }
 
-export async function getAlimentosByCategoria(categoria: string): Promise<ApiResponse<Alimento[]>> {
-  return fetchApi<Alimento[]>(`/alimentos/categoria?categoria=${encodeURIComponent(categoria)}`)
+export async function getAlimentosByCategoria(categoria: string, page = 0, size = 10): Promise<ApiResponse<{ content: Alimento[], totalElements: number, totalPages: number }>> {
+  // Limita o tamanho máximo a 10
+  const limitedSize = Math.min(Math.max(size, 1), 10)
+  return fetchApi(`/alimentos/categoria?categoriaAlimentar=${encodeURIComponent(categoria)}&page=${page}&size=${limitedSize}`)
 }
 
-export async function getAutocomplete(termo: string): Promise<ApiResponse<string[]>> {
-  return fetchApi<string[]>(`/alimentos/busca/autocomplete?termo=${encodeURIComponent(termo)}`)
+export async function getAutocomplete(nome: string): Promise<ApiResponse<string[]>> {
+  return fetchApi<string[]>(`/alimentos/busca/autocomplete?nome=${encodeURIComponent(nome)}`)
 }

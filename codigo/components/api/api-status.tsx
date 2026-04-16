@@ -17,8 +17,8 @@ const ENDPOINTS_TO_CHECK = [
   { path: '/alimentos', name: 'Listar Todos' },
   { path: '/alimentos/1', name: 'Buscar por ID' },
   { path: '/alimentos/search?nome=arroz', name: 'Buscar por Nome' },
-  { path: '/alimentos/categoria?categoria=Cereais', name: 'Filtrar Categoria' },
-  { path: '/alimentos/busca/autocomplete?termo=arroz', name: 'Autocomplete' },
+  { path: '/alimentos/categoria?categoriaAlimentar=bebida&page=0&size=10', name: 'Filtrar Categoria' },
+  { path: '/alimentos/busca/autocomplete?nome=arr', name: 'Autocomplete' },
 ]
 
 export function ApiStatus() {

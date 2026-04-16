@@ -27,12 +27,12 @@ export function SearchSection() {
   const [totalResults, setTotalResults] = useState(0)
   const [responseStatus, setResponseStatus] = useState<{ status: number; duration: number } | null>(null)
 
-  const fetchSuggestions = useCallback(async (termo: string) => {
-    if (termo.length < 2) {
+  const fetchSuggestions = useCallback(async (nome: string) => {
+    if (nome.length < 2) {
       setSuggestions([])
       return
     }
-    const response = await getAutocomplete(termo)
+    const response = await getAutocomplete(nome)
     if (response.data && Array.isArray(response.data)) {
       setSuggestions(response.data.slice(0, 5))
     }

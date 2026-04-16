@@ -4,7 +4,8 @@ const BASE_URL = 'https://tabelanutricionalbrasileira.onrender.com'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  const endpoint = searchParams.get('endpoint') || '/alimentos'
+  // Aceita tanto "endpoint" quanto "path" como parametro
+  const endpoint = searchParams.get('endpoint') || searchParams.get('path') || '/alimentos'
   
   const startTime = performance.now()
   

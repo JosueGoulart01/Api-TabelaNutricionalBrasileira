@@ -31,9 +31,9 @@ const response3 = await fetch(\`${BASE_URL}/alimentos/search?nome=\${nome}\`);
 const resultados = await response3.json();
 console.log(resultados);
 
-// Filtrar por categoria
-const categoria = 'Cereais e derivados';
-const response4 = await fetch(\`${BASE_URL}/alimentos/categoria?categoria=\${encodeURIComponent(categoria)}\`);
+// Filtrar por categoria (paginado - máximo 10 itens)
+const categoria = 'bebida';
+const response4 = await fetch(\`${BASE_URL}/alimentos/categoria?categoriaAlimentar=\${encodeURIComponent(categoria)}&page=0&size=10\`);
 const porCategoria = await response4.json();
 console.log(porCategoria);`,
   },
@@ -108,11 +108,11 @@ response = requests.get(f"{BASE_URL}/alimentos/search", params={"nome": nome})
 resultados = response.json()
 print(f"Encontrados: {len(resultados)} resultados para '{nome}'")
 
-# Filtrar por categoria
-categoria = "Cereais e derivados"
-response = requests.get(f"{BASE_URL}/alimentos/categoria", params={"categoria": categoria})
+# Filtrar por categoria (paginado - máximo 10 itens)
+categoria = "bebida"
+response = requests.get(f"{BASE_URL}/alimentos/categoria", params={"categoriaAlimentar": categoria, "page": 0, "size": 10})
 por_categoria = response.json()
-print(f"Alimentos em '{categoria}': {len(por_categoria)}")`,
+print(f"Alimentos em '{categoria}': {len(por_categoria.get('content', []))}")`,
   },
   curl: {
     label: 'cURL',
@@ -127,11 +127,11 @@ curl -X GET "${BASE_URL}/alimentos/1"
 # Buscar por nome (parcial ou completo)
 curl -X GET "${BASE_URL}/alimentos/search?nome=arroz"
 
-# Filtrar por categoria
-curl -X GET "${BASE_URL}/alimentos/categoria?categoria=Cereais%20e%20derivados"
+# Filtrar por categoria (paginado - máximo 10 itens)
+curl -X GET "${BASE_URL}/alimentos/categoria?categoriaAlimentar=bebida&page=0&size=10"
 
 # Autocomplete de nomes
-curl -X GET "${BASE_URL}/alimentos/busca/autocomplete?termo=arr"
+curl -X GET "${BASE_URL}/alimentos/busca/autocomplete?nome=arr"
 
 # Com headers formatados
 curl -X GET "${BASE_URL}/alimentos" \\

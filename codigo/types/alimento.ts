@@ -61,10 +61,22 @@ export const ENDPOINTS: Endpoint[] = [
     description: 'Filtra alimentos por categoria',
     params: [
       {
-        name: 'categoria',
+        name: 'categoriaAlimentar',
         type: 'query',
-        description: 'Nome da categoria',
+        description: 'Nome da categoria (ex: bebida, cereais)',
         required: true,
+      },
+      {
+        name: 'page',
+        type: 'query',
+        description: 'Numero da pagina (comeca em 0)',
+        required: false,
+      },
+      {
+        name: 'size',
+        type: 'query',
+        description: 'Tamanho da pagina',
+        required: false,
       },
     ],
   },
@@ -74,7 +86,7 @@ export const ENDPOINTS: Endpoint[] = [
     description: 'Retorna sugestões de nomes de alimentos',
     params: [
       {
-        name: 'termo',
+        name: 'nome',
         type: 'query',
         description: 'Termo para autocomplete',
         required: true,
